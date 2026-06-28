@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OH HEE KYUNG | Web Publisher</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/profile.css?v=1020">
+  <link rel="stylesheet" href="css/mobil-device.css?v=1000">
+  <link rel="stylesheet" href="css/pc-device.css?v=1001">
+</head>
+<body>
+  <aside class="side-nav" aria-label="페이지 이동">
+    <a href="#profile-page" class="brand">OH<span>.</span></a>
+
+    <nav>
+      <a href="#profile-page" class="active">
+        <span class="nav-icon">⌂</span>
+        Home
+      </a>
+      <a href="#about">
+        <span class="nav-icon">○</span>
+        About
+      </a>
+      <a href="#daiso">
+        <span class="nav-icon">□</span>
+        Projects
+      </a>
+      <a href="#contact-section">
+        <span class="nav-icon">✉</span>
+        Contact
+      </a>
+    </nav>
+  </aside>
+
+  <main class="site-main">
+    <section id="profile-page" class="hero-section">
+      <div class="hero-top">
+        <p>Web Publisher <span></span></p>
+      </div>
+
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Hello, I'm</p>
+          <h1>OH HEE<br>KYUNG</h1>
+          <p class="intro">
+            사용자의 시선과 흐름을 고려해<br>
+            직관적인 UI와 반응형 웹을 구현하는 웹 퍼블리셔입니다.
+          </p>
+          <ul class="tags">
+            <li>#디테일</li>
+            <li>#관찰</li>
+            <li>#사용자배려</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-label="프로필 이미지">
+          <div class="portrait-bg"></div>
+          <img src="img/사진.PNG" alt="오희경 프로필 사진">
+        </div>
+      </div>
+
+      <div class="summary-cards">
+        <article id="about" class="summary-card">
+          <h2><span></span>About Me</h2>
+          <p>
+            사용자의 입장에서 생각하고 디테일을 놓치지 않는 개발을 지향합니다.
+            새로운 기술을 배우는 것을 좋아하며, 함께 성장하는 퍼블리셔가 되고 싶습니다.
+          </p>
+        </article>
+
+        <article class="summary-card">
+          <h2><span></span>Skills</h2>
+          <ul class="skill-chips">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>PHP</li>
+            <li>MySQL</li>
+            <li>Firebase</li>
+            <li>Git</li>
+            <li>Figma</li>
+            <li>Vercel</li>
+            <li>GitHub</li>
+          </ul>
+        </article>
+
+        <article id="projects" class="summary-card">
+          <h2><span></span>Projects</h2>
+          <ul class="project-list">
+            <li>
+              <img src="img/29cm.png" alt="29CM 프로젝트">
+              <a href="#cm29"><strong>29CM Clone Coding</strong><small>반응형 쇼핑몰 클론 코딩</small></a>
+            </li>
+            <li>
+              <img src="img/ci-shinhan-pc.png" alt="신한카드 프로젝트">
+              <a href="#shinhan"><strong>신한카드 프로젝트</strong><small>신한카드 메인페이지 클론</small></a>
+            </li>
+            <li>
+              <img src="img/winix.png" alt="위닉스 프로젝트">
+              <a href="#winix"><strong>WINIX Landing Page</strong><small>위닉스 랜딩페이지 클론</small></a>
+            </li>
+            <li>
+              <img src="img/daiso-logo.svg" alt="다이소몰 프로젝트">
+              <a href="#daiso"><strong>DAISO MALL Renewal</strong><small>3인 팀 반응형 웹 프로젝트</small></a>
+            </li>
+            <li>
+              <span class="project-thumb movie-thumb">MOVIE</span>
+              <a href="#movie"><strong>Movie Curation App</strong><small>TMDB API 활용 영화 큐레이션 앱</small></a>
+            </li>
+          </ul>
+          <a href="#daiso">View all projects <b>→</b></a>
+        </article>
+
+        <article class="summary-card">
+          <h2><span></span>Career</h2>
+          <ul class="career-list">
+            <li>
+              <strong>학력</strong>
+              <small>목포 혜인여자고등학교 졸업</small>
+            </li>
+            <li>
+              <strong>경력</strong>
+              <small>탑텐 · 2023.05 ~ 2025.09</small>
+              <small>SSG.COM · 2022.03 ~ 2022.11</small>
+              <small>주식회사 하라 · 2020.11 ~ 2021.11</small>
+            </li>
+            <li>
+              <strong>자격증</strong>
+              <small>GTQ그래픽기술자격 1급</small>
+            </li>
+          </ul>
+          <a href="#contact-section">Contact me <b>→</b></a>
+        </article>
+      </div>
+
+      <a href="#daiso" class="scroll-btn" aria-label="프로젝트로 이동">↓</a>
+    </section>
+
+    <section id="daiso" class="project-section daiso-section">
+      <div class="project-title">
+        <h2><img src="img/Daiso-logo.svg" alt="DAISO MALL" class="daiso-logo"></h2>
+        <p>Team Responsive Web</p>
+      </div>
+
+      <div class="project-inner daiso-layout">
+        <div class="daiso-preview" aria-label="다이소몰 반응형 화면 미리보기">
+          <div class="daiso-shot daiso-tablet">
+            <div class="daiso-back-image">
+              <img src="img/daiso-tablet.png" alt="다이소몰 태블릿 화면">
+            </div>
+            <p>Tablet</p>
+          </div>
+
+          <div class="daiso-shot daiso-desktop">
+            <div class="daiso-back-image">
+              <img src="img/daiso-pc.png" alt="다이소몰 PC 화면">
+            </div>
+            <p>PC</p>
+          </div>
+
+          <div class="daiso-device daiso-mobile">
+            <span class="daiso-notch" aria-hidden="true"></span>
+            <iframe src="https://daisomall-green-team.vercel.app/" title="다이소몰 모바일 프로젝트 미리보기" loading="lazy"></iframe>
+          </div>
+
+          <div class="project-info daiso-project-info">
+            <p><span>Period.</span> 2026.05 - 2026.06</p>
+            <p><span>Team.</span> 3인 팀 프로젝트</p>
+          </div>
+        </div>
+
+        <div class="project-text">
+          <h3>프로젝트 소개</h3>
+          <p>
+            다이소몰의 모바일 사용성을 중심으로 콘텐츠 구조와 시각적 흐름을 재정리한
+            React 기반 반응형 리뉴얼 프로젝트입니다.
+          </p>
+
+          <h3>담당 역할</h3>
+          <ul>
+            <li>기획전 콘텐츠 및 프로모션 카드 UI 디자인</li>
+            <li>푸터·앱 다운로드·SNS 영역 디자인 및 구현</li>
+            <li>카테고리 이미지 구성과 반응형 디테일 조정</li>
+            <li>React·SCSS 구현 및 GitHub 협업</li>
+          </ul>
+
+          <h3>Color Palette</h3>
+          <div class="color-box">
+            <div class="color"><span style="background:#FFFFFF; border:1px solid #ddd"></span><p>#FFFFFF</p></div>
+            <div class="color"><span style="background:#24262B"></span><p>#24262B</p></div>
+            <div class="color"><span style="background:#5A5F68"></span><p>#5A5F68</p></div>
+            <div class="color"><span style="background:#777F8C"></span><p>#777F8C</p></div>
+            <div class="color"><span style="background:#D70011"></span><p>#F7F7F8</p></div>
+            <div class="color"><span style="background:#F7F8FA"></span><p>#F7F7F8</p></div>
+          </div>
+
+          <h3>사용 기술</h3>
+          <ul class="tool-list">
+            <li><img src="img/figma.png" alt="Figma"><span>Figma</span></li>
+            <li><img src="img/react.svg" alt="React"><span>React</span></li>
+            <li><img src="img/css.png" alt="SCSS"><span>SCSS</span></li>
+            <li><img src="img/github.png" alt="GitHub"><span>GitHub</span></li>
+            <li><img src="img/vercel.png" alt="Vercel"><span>Vercel</span></li>
+            <li><img src="img/json.png" alt="JSON"><span>JSON</span></li>
+          </ul>
+
+          <div class="btn-group">
+            <a href="https://www.daisomall.co.kr/ds?airbridge_referrer=airbridge%3Dtrue%26client_id%3D8f11d2c8-b4b2-45f0-8188-ca72837aaa8c%26event_uuid%3D5c30f852-f45f-4224-a707-b6fd33d39c50%26referrer_timestamp%3D1782381696077%26short_id%3Dcfut89%26channel%3Dnaver%26campaign%3DPC_Brand%26tracking_template_id%3D5add750f82fa397634983a43b8bb044e%26content%3Dhomelink%26sub_id%3Dnaver_bs%26og_tag_id%3D445148343%26routing_short_id%3Dcfut89&utm_source=naver&utm_campaign=PC_Brand&utm_medium=naver_bs&utm_content=homelink" target="_blank">Original</a>
+            <a href="https://github.com/suyeonn113/daisomall" target="_blank">GitHub</a>
+            <a href="file/greenteam-daisomall.pdf" target="_blank">Planning</a>
+            <a href="https://daisomall-green-team.vercel.app/" target="_blank">View Site</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="winix" class="project-section">
+      <div class="project-title">
+        <h2><img src="img/winix.png" alt="WINIX" class="winix-logo"></h2>
+        <p>Mobile Renewal</p>
+      </div>
+
+      <div class="project-inner">
+        <div class="device">
+          <iframe 
+          src="https://dhgmlrud00.dothome.co.kr/winix/main.html" 
+          sandbox="allow-forms allow-scripts allow-same-origin"
+          title="WINIX 모바일 리뉴얼"></iframe>
+          <div class="project-info">
+            <p><span>Period.</span> 2025.12 - 2026.02</p>
+            <p><span>Contribution.</span> 개인 작업 100%</p>
+          </div>
+        </div>
+
+        <div class="project-text">
+          <h3>기획 의도</h3>
+          <p>
+            1~2인 가구 증가로 미니 가전 시장이 확대되는 흐름에 맞춰, 브랜드의 제품 정보와 콘텐츠를 더 직관적으로 전달하는 모바일 화면을 구성했습니다.
+            정보 구조를 재정비하고 여백 중심의 UI를 적용해 탐색 경험을 개선했습니다.
+          </p>
+
+          <h3>Color Palette</h3>
+          <div class="color-box">
+            <div class="color"><span style="background:#3F5BD8"></span><p>#3F5BD8</p></div>
+            <div class="color"><span style="background:#EAF1F8"></span><p>#EAF1F8</p></div>
+            <div class="color"><span style="background:#FFFFFF; border:1px solid #ddd"></span><p>#FFFFFF</p></div>
+            <div class="color"><span style="background:#F2F2F2"></span><p>#F2F2F2</p></div>
+            <div class="color"><span style="background:#222222"></span><p>#222222</p></div>
+          </div>
+
+          <h3>개선 방향</h3>
+          <ul>
+            <li>정보 구조 단순화</li>
+            <li>여백 중심 UI 설계</li>
+            <li>직관적인 모바일 내비게이션 구성</li>
+          </ul>
+
+          <h3>사용 기술</h3>
+          <ul class="tool-list">
+            <li><img src="img/figma.png" alt="Figma"><span>Figma</span></li>
+            <li><img src="img/html.png" alt="HTML5"><span>HTML5</span></li>
+            <li><img src="img/css.png" alt="CSS3"><span>CSS3</span></li>
+            <li><img src="img/java.png" alt="JavaScript"><span>JavaScript</span></li>
+          </ul>
+
+          <div class="btn-group">
+            <a href="https://www.winix.com/" target="_blank">Original</a>
+            <a href="https://www.figma.com/design/B1cqFl9KfMyNxTzwN7Dkva/%EB%AA%A8%EB%B0%94%EC%9D%BC%EB%94%94%EC%9E%90%EC%9D%B8_%EC%9C%84%EB%8B%89%EC%8A%A4?node-id=0-1&t=lHyIZkLNMThbi5dM-1" target="_blank">Wireframe</a>
+            <a href="file/WINIX.pdf" target="_blank">Planning</a>
+            <a href="https://dhgmlrud00.dothome.co.kr/winix/main.html" target="_blank">View Site</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cm29" class="project-section">
+      <div class="project-title">
+        <h2><img src="img/29cm.png" alt="29CM"></h2>
+        <p>Responsive Web</p>
+      </div>
+
+      <div class="project-inner wide">
+        <div class="project-image">
+          <img src="img/29cm dev.png" alt="29CM 반응형 프로젝트 이미지">
+          <div class="project-info">
+            <p><span>Period.</span> 2026.03 - 2026.05</p>
+            <p><span>Contribution.</span> 개인 작업 100%</p>
+          </div>
+        </div>
+
+        <div class="project-text">
+          <h3>기획 의도</h3>
+          <p>
+            29CM 웹사이트의 콘텐츠 우선순위를 재정리하고, 사용자의 시선 흐름에 맞춰 반응형 레이아웃을 설계했습니다.
+            다양한 디바이스에서도 자연스럽게 탐색할 수 있도록 화면 구조를 개선했습니다.
+          </p>
+
+          <h3>Color Palette</h3>
+          <div class="color-box">
+            <div class="color"><span style="background:#000000"></span><p>#000000</p></div>
+            <div class="color"><span style="background:#6B6B6B"></span><p>#6B6B6B</p></div>
+            <div class="color"><span style="background:#A3A3A3"></span><p>#A3A3A3</p></div>
+            <div class="color"><span style="background:#FFFFFF; border:1px solid #ddd"></span><p>#FFFFFF</p></div>
+          </div>
+
+          <h3>개선 방향</h3>
+          <ul>
+            <li>반응형 레이아웃 설계</li>
+            <li>디바이스별 UI 최적화</li>
+            <li>콘텐츠 우선순위 재구성</li>
+          </ul>
+
+          <h3>사용 기술</h3>
+          <ul class="tool-list">
+            <li><img src="img/figma.png" alt="Figma"><span>Figma</span></li>
+            <li><img src="img/html.png" alt="HTML5"><span>HTML5</span></li>
+            <li><img src="img/css.png" alt="CSS3"><span>CSS3</span></li>
+            <li><img src="img/java.png" alt="JavaScript"><span>JavaScript</span></li>
+          </ul>
+
+          <div class="btn-group">
+            <a href="https://www.29cm.co.kr/" target="_blank">Original</a>
+            <a href="https://www.figma.com/design/80hBKip4XxrsaBiZ747Gy2/%EB%AA%A8%EB%B0%94%EC%9D%BC%EB%94%94%EC%9E%90%EC%9D%B8_29CM?node-id=0-1&t=ha8UkpY24UHyKEHt-1" target="_blank">Wireframe</a>
+            <a href="file/29cm.pdf" target="_blank">Planning</a>
+            <a href="https://dhgmlrud00.dothome.co.kr/29cm/main.html" target="_blank">View Site</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="movie" class="project-section">
+      <div class="project-title">
+        <h2 class="text-logo">MOVIE</h2>
+        <p>API Curation App</p>
+      </div>
+
+      <div class="project-inner movie-layout">
+        <div class="movie-preview" aria-label="영화 큐레이션 앱 미리보기">
+          <div class="pc-device movie-device">
+            <iframe src="https://movie-curation-app.vercel.app/" title="Movie Curation App"></iframe>
+          </div>
+          <div class="project-info">
+            <p><span>Period.</span> 2026.06</p>
+            <p><span>Contribution.</span> 개인 작업 100%</p>
+          </div>
+        </div>
+
+        <div class="project-text">
+          <h3>기획 의도</h3>
+          <p>
+            영화 데이터를 직접 관리하지 않고 TMDB API를 활용해 현재 상영작, 개봉 예정작, 평점 높은 영화를 동적으로 불러오는 큐레이션 앱입니다.
+            사용자가 영화 정보를 탐색하고 관심 영화를 저장할 수 있도록 목록, 검색, 상세 페이지 흐름을 구성했습니다.
+          </p>
+
+          <h3>API 활용 포인트</h3>
+          <ul>
+            <li>TMDB API를 활용하여 영화 목록, 상세 정보, 출연진 정보를 제공</li>
+            <li>React state와 useEffect를 활용해 데이터를 화면에 동적으로 표시</li>
+            <li>localStorage를 활용하여 관심 영화(찜하기) 저장 및 해제 기능 구현</li>
+          </ul>
+
+          <h3>Color Palette</h3>
+            <div class="color-box">
+              <div class="color"><span style="background:#111111"></span><p>#111111</p></div>
+              <div class="color"><span style="background:#FF8C42"></span><p>#FF8C42</p></div>
+              <div class="color"><span style="background:#777777"></span><p>#777777</p></div>
+              <div class="color"><span style="background:#BBBBB8"></span><p>#BBBBBB</p></div>
+              <div class="color"><span style="background:#FFFFFF; border:1px solid #ddd"></span><p>#FFFFFF</p></div>
+            </div>
+
+          <h3>사용 기술</h3>
+            <ul class="tool-list movie-tools">
+              <li><img src="img/react.svg" alt=""><span>React</span></li>
+              <li><img src="img/reactrouter.svg" alt=""><span>React Router</span></li>
+              <li><img src="img/themoviedatabase.svg" alt=""><span>TMDB API</span></li>
+              <li><img src="img/firebase.svg" alt=""><span>Firebase</span></li>
+              <li><span class="tech-icon storage">LS</span><span>localStorage</span></li>
+            </ul>
+
+          <div class="btn-group">
+            <a href="https://movie-curation-app.vercel.app/" target="_blank">View Site</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="shinhan" class="project-section">
+      <div class="project-title">
+        <h2><img src="img/ci-shinhan-pc.png" alt="신한카드"></h2>
+        <p>Web Renewal</p>
+      </div>
+
+      <div class="project-inner shinhan-layout">
+        <div class="project-preview">
+          <div class="pc-device">
+            <iframe src="https://shinhan-card-renewal.vercel.app/" title="신한카드 웹 리뉴얼"></iframe>
+          </div>
+          <div class="project-info">
+            <p><span>Period.</span> 2026.05 - 2026.06</p>
+            <p><span>Contribution.</span> 개인 작업 100%</p>
+          </div>
+        </div>
+
+        <div class="project-text">
+          <h3>기획 의도</h3>
+          <p>
+            기존 신한카드 사이트의 복잡한 서비스 구조를 바탕으로, 사용자가 자신에게 맞는 카드와 혜택 정보를 쉽게 탐색할 수 있도록 정보 접근성을 강화했습니다.
+          </p>
+
+          <h3>Color Palette</h3>
+          <div class="color-box">
+            <div class="color"><span style="background:#0046FF"></span><p>#0046FF</p></div>
+            <div class="color"><span style="background:#EAF1FF"></span><p>#EAF1FF</p></div>
+            <div class="color"><span style="background:#F7F9FC"></span><p>#F7F9FC</p></div>
+            <div class="color"><span style="background:#FFFFFF; border:1px solid #ddd"></span><p>#FFFFFF</p></div>
+            <div class="color"><span style="background:#222222"></span><p>#222222</p></div>
+          </div>
+
+          <h3>사용 기술</h3>
+          <ul class="tool-list">
+            <li><img src="img/figma.png" alt="Figma"><span>Figma</span></li>
+            <li><img src="img/illus.png" alt="Illustrator"><span>Illustrator</span></li>
+            <li><img src="img/html.png" alt="HTML5"><span>HTML5</span></li>
+            <li><img src="img/css.png" alt="CSS3"><span>CSS3</span></li>
+            <li><img src="img/java.png" alt="JavaScript"><span>JavaScript</span></li>
+          </ul>
+
+          <div class="btn-group">
+            <a href="https://www.shinhancard.com/pconts/html/main.html" target="_blank">Original</a>
+            <a href="https://www.figma.com/design/HM3KEOjEvbZ8BKtVjyt7nO/%EC%8B%A0%ED%95%9C%EC%B9%B4%EB%93%9C?node-id=0-1&t=XMUsqmzz79DFEWeX-1" target="_blank">Wireframe</a>
+            <a href="https://shinhan-card-renewal.vercel.app/" target="_blank">View Site</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact-section" class="contact-section">
+      <div class="contact-inner">
+        <p class="eyebrow">Contact</p>
+        <h2>함께 이야기하고 싶다면<br>편하게 연락 주세요.</h2>
+        <dl class="contact-list large">
+          <div>
+            <dt>Email</dt>
+            <dd><a href="mailto:dhgmlrud1215@naver.com">dhgmlrud1215@naver.com</a></dd>
+          </div>
+          <div>
+            <dt>Phone</dt>
+            <dd>010-6296-0569</dd>
+          </div>
+          <div>
+            <dt>Location</dt>
+            <dd>Seoul, Republic of Korea</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+  </main>
+  <script>
+    const daisoSection = document.getElementById("daiso");
+    const winixSection = document.getElementById("winix");
+    if (daisoSection && winixSection) {
+      winixSection.parentNode.insertBefore(daisoSection, winixSection);
+    }
+
+    const navLinks = document.querySelectorAll(".side-nav nav a");
+    const setActiveNav = (href) => {
+      navLinks.forEach((link) => {
+        link.classList.toggle("active", link.getAttribute("href") === href);
+      });
+    };
+
+    const getTop = (id) => {
+      const element = document.getElementById(id);
+      return element ? element.offsetTop : Number.POSITIVE_INFINITY;
+    };
+
+    const updateActiveNav = () => {
+      const scrollPoint = window.scrollY + window.innerHeight * 0.38;
+
+      if (window.scrollY < 120) {
+        setActiveNav("#profile-page");
+      } else if (scrollPoint >= getTop("contact-section")) {
+        setActiveNav("#contact-section");
+      } else if (scrollPoint >= getTop("daiso")) {
+        setActiveNav("#daiso");
+      } else if (scrollPoint >= getTop("about")) {
+        setActiveNav("#about");
+      } else {
+        setActiveNav("#profile-page");
+      }
+    };
+
+    window.addEventListener("scroll", updateActiveNav, { passive: true });
+    window.addEventListener("resize", updateActiveNav);
+    updateActiveNav();
+  </script>
+</body>
+</html>

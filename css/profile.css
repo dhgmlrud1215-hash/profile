@@ -1,0 +1,970 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;600;700&display=swap');
+
+/* ========================================
+   공통 - 변수 및 기본 설정
+======================================== */
+
+:root {
+  --point: #6353ff;
+  --point-light: #eeeafd;
+  --ink: #111216;
+  --muted: #626573;
+  --line: #e8e9ef;
+  --panel: rgba(255, 255, 255, 0.84);
+  --shadow: 0 24px 70px rgba(26, 26, 40, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+section,
+.summary-card {
+  scroll-margin-top: 28px;
+}
+
+body {
+  min-width: 320px;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 65% 16%, rgba(99, 83, 255, 0.12), transparent 30%),
+    linear-gradient(135deg, #fbfbfd 0%, #f7f7fb 50%, #ffffff 100%);
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ========================================
+   공통 - 왼쪽 사이드 내비게이션
+======================================== */
+
+.side-nav {
+  position: fixed;
+  inset: 0 auto 0 0;
+  z-index: 100;
+  width: 132px;
+  padding: 42px 28px 34px;
+  background: rgba(255, 255, 255, 0.78);
+  border-right: 1px solid rgba(232, 233, 239, 0.75);
+  backdrop-filter: blur(24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand {
+  font-family: "Montserrat", sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.brand span,
+.hero-top span,
+.summary-card h2 span {
+  background: var(--point);
+  border-radius: 50%;
+}
+
+.brand span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-left: 2px;
+}
+
+.side-nav nav {
+  margin-top: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.side-nav nav a {
+  min-width: 70px;
+  color: #4c4f5b;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.side-nav nav a:hover,
+.side-nav nav a.active {
+  color: var(--point);
+  transform: translateY(-2px);
+}
+
+.nav-icon {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 8px;
+  border: 2px solid currentColor;
+  border-radius: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.site-main {
+  padding-left: 132px;
+}
+
+/* ========================================
+   메인 프로필 - 인트로 영역
+======================================== */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 52px 6vw 72px;
+  overflow: visible;
+}
+
+.hero-top {
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hero-top p {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.hero-top span {
+  width: 10px;
+  height: 10px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(360px, 0.92fr) minmax(500px, 1.08fr);
+  align-items: center;
+  gap: 38px;
+  max-width: 1540px;
+  min-height: 590px;
+  margin: 16px auto 0;
+}
+
+.hero-copy {
+  padding-left: 4.3vw;
+}
+
+.eyebrow {
+  margin-bottom: 14px;
+  color: var(--point);
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(22px, 2vw, 30px);
+  font-weight: 800;
+}
+
+.hero-copy h1 {
+  color: var(--ink);
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(68px, 7.4vw, 126px);
+  line-height: 0.93;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.intro {
+  margin-top: 32px;
+  color: #3e414c;
+  font-size: 19px;
+  line-height: 1.85;
+  word-break: keep-all;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 28px;
+  color: var(--point);
+  font-weight: 800;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 48px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 164px;
+  min-height: 56px;
+  padding: 0 26px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-weight: 800;
+  box-shadow: 0 14px 28px rgba(18, 18, 25, 0.08);
+}
+
+.btn.primary {
+  color: #fff;
+  background: #111;
+  border-color: #111;
+}
+
+.btn.ghost {
+  color: #23242b;
+  background: rgba(255, 255, 255, 0.78);
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 500px;
+}
+
+.portrait-bg {
+  position: absolute;
+  right: 12%;
+  bottom: 0;
+  width: min(580px, 82%);
+  height: 78%;
+  background: linear-gradient(145deg, #b39df7, #d7ccff);
+  border-radius: 50% 50% 0 0;
+}
+
+.hero-visual > img {
+  position: absolute;
+  right: 19%;
+  bottom: 0;
+  z-index: 2;
+  width: min(455px, 60%);
+  height: 500px;
+  object-fit: cover;
+  object-position: center 12%;
+  border-radius: 260px 260px 0 0;
+  background: #fff;
+  box-shadow: 0 28px 70px rgba(40, 36, 70, 0.14);
+}
+
+/* ========================================
+   메인 프로필 - 소개 카드
+======================================== */
+
+.summary-cards {
+  position: relative;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1180px;
+  margin: 34px auto 0;
+}
+
+.summary-card {
+  min-height: 260px;
+  padding: 36px 42px 32px;
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.98);
+  border-radius: 12px;
+  box-shadow: 0 18px 56px rgba(37, 38, 53, 0.09);
+  backdrop-filter: blur(22px);
+}
+
+.summary-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 34px;
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.summary-card h2 span {
+  flex: 0 0 auto;
+  width: 9px;
+  height: 9px;
+}
+
+.summary-card p {
+  color: #3f424d;
+  font-size: 16px;
+  line-height: 1.9;
+  word-break: keep-all;
+}
+
+.summary-card > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 34px;
+  color: #515462;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.summary-card b {
+  color: var(--point);
+  font-size: 20px;
+}
+
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 14px;
+}
+
+.skill-chips li {
+  min-width: 78px;
+  padding: 13px 18px;
+  color: #303173;
+  background: #f1effa;
+  border-radius: 9px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.project-list {
+  display: grid;
+  gap: 16px;
+}
+
+.project-list li:has(a[href="#daiso"]) {
+  order: -1;
+}
+
+.project-list li {
+  display: grid;
+  grid-template-columns: 78px 1fr;
+  align-items: center;
+  gap: 18px;
+}
+
+.project-list img,
+.project-thumb {
+  width: 78px;
+  height: 58px;
+  padding: 8px;
+  background: #f4f5f8;
+  border-radius: 7px;
+}
+
+.project-list img {
+  object-fit: contain;
+}
+
+.project-thumb {
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: #111;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.movie-thumb {
+  background: linear-gradient(135deg, #111 0%, #2a2a2a 58%, #6353ff 100%);
+}
+
+.project-list strong,
+.project-list small {
+  display: block;
+}
+
+.project-list strong {
+  margin-bottom: 5px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.project-list small {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.contact-list {
+  display: grid;
+  gap: 7px;
+}
+
+.career-list {
+  display: grid;
+  gap: 18px;
+}
+
+.career-list strong,
+.career-list small {
+  display: block;
+}
+
+.career-list strong {
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.career-list small {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.career-list small + small {
+  margin-top: 3px;
+}
+
+.contact-list dt {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.contact-list dd {
+  color: #30323b;
+  font-size: 16px;
+}
+
+.scroll-btn {
+  position: fixed;
+  right: 44px;
+  bottom: 44px;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  color: #fff;
+  background: var(--point);
+  border-radius: 50%;
+  font-size: 26px;
+  box-shadow: 0 15px 30px rgba(99, 83, 255, 0.26);
+}
+
+/* ========================================
+   프로젝트 공통 - 섹션 및 제목
+======================================== */
+
+.project-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 152px 6vw 100px;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+.project-section:nth-of-type(odd) {
+  background: #f8f9fc;
+}
+
+.project-title {
+  position: absolute;
+  top: 70px;
+  left: 6vw;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  z-index: 3;
+}
+
+.project-title h2 img {
+  max-width: 190px;
+  max-height: 48px;
+  object-fit: contain;
+}
+
+/* 위닉스 - 로고 */
+#winix .project-title {
+  top: 30px;
+}
+.project-title h2 img.winix-logo {
+  width: 185px;
+  max-width: none;
+  max-height: none;
+}
+
+/* 다이소 - 로고 */
+.project-title h2 img.daiso-logo {
+  width: 174px;
+  max-width: none;
+  max-height: 54px;
+}
+
+.project-title .text-logo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 52px;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.project-title p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.project-inner {
+  width: min(1220px, 100%);
+  margin: 36px auto 0;
+  display: grid;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(340px, 1fr);
+  align-items: center;
+  gap: 66px;
+}
+
+/* 29CM - 프로젝트 레이아웃 */
+.project-inner.wide {
+  width: min(1320px, 100%);
+  grid-template-columns: minmax(480px, 1.1fr) minmax(390px, 0.9fr);
+}
+
+/* 신한카드 - 프로젝트 레이아웃 */
+.project-inner.shinhan-layout {
+  width: min(1240px, 100%);
+  grid-template-columns: minmax(720px, 1fr) minmax(380px, 0.85fr);
+  gap: 64px;
+  align-items: center;
+}
+
+/* 영화 - 프로젝트 레이아웃 */
+.project-inner.movie-layout {
+  width: min(1280px, 100%);
+  grid-template-columns: minmax(560px, 1fr) minmax(420px, 0.9fr);
+}
+
+/* ========================================
+   다이소 - 반응형 기기 미리보기
+======================================== */
+
+.project-inner.daiso-layout {
+  width: min(1360px, 100%);
+  grid-template-columns: minmax(680px, 1.2fr) minmax(400px, 0.8fr);
+  gap: 48px;
+}
+
+.daiso-shot {
+  position: absolute;
+}
+
+.daiso-shot p {
+  margin-top: 10px;
+  color: #333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.daiso-preview {
+  position: relative;
+  min-height: 760px;
+}
+
+.daiso-device {
+  position: absolute;
+  overflow: hidden;
+  background: #151515;
+  border: 4px solid #282828;
+  box-shadow: 0 26px 58px rgba(0, 0, 0, 0.24);
+  
+}
+
+.daiso-back-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.18);
+}
+
+.daiso-back-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  image-rendering: auto;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.daiso-tablet {
+  left: -48px;
+  top: 190px;
+  z-index: 2;
+  width: 310px;
+}
+
+.daiso-tablet > p {
+  padding-right: 50px;
+}
+
+.daiso-tablet .daiso-back-image {
+  aspect-ratio: 1538 / 1732;
+}
+
+.daiso-desktop {
+  right: 0;
+  top: 150px;
+  z-index: 1;
+  width: 420px;
+}
+
+.daiso-desktop .daiso-back-image {
+  height: 442px;
+}
+
+.daiso-desktop img {
+  width: 420px;
+  height: auto;
+}
+
+.daiso-desktop > p {
+  padding-right: 100px;
+  text-align: right;
+}
+
+.daiso-mobile {
+  left: 50%;
+  top: 50%;
+  z-index: 5;
+  width: 360px;
+  height: 610px;
+  padding: 8px;
+  border: 11px solid #242424;
+  border-radius: 58px;
+  transform: translate(-60%, -50%);
+  box-shadow:
+    0 32px 75px rgba(0, 0, 0, 0.34),
+    inset 0 0 0 2px #111;
+  background: #fff;
+}
+
+.daiso-mobile iframe {
+  display: block;
+  position: relative;
+  top: 20px;
+  width: 100%;
+  height: calc(100% - 20px);
+  border: 0;
+  border-radius: 34px;
+  background: #fff url("../img/daiso-home.png") top center / 100% auto no-repeat;
+}
+
+.daiso-notch {
+  position: absolute;
+  left: 50%;
+  top: 15px;
+  z-index: 3;
+  width: 110px;
+  height: 28px;
+  border-radius: 20px;
+  background: #080808;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.daiso-project-info {
+  position: absolute;
+  left: 50%;
+  top: calc(50% + 320px);
+  bottom: auto;
+  width: max-content;
+  transform: translateX(-60%);
+}
+
+/* ========================================
+   프로젝트 공통 - 이미지 미리보기
+======================================== */
+
+.project-image {
+  position: relative;
+}
+
+.project-preview {
+  width: 100%;
+}
+
+.project-image > img {
+  width: 100%;
+  filter: drop-shadow(0 24px 42px rgba(0, 0, 0, 0.12));
+}
+
+/* ========================================
+   영화 - PC 기기 미리보기
+======================================== */
+
+.movie-preview {
+  width: 100%;
+}
+
+.pc-device.movie-device {
+  position: relative;
+  width: min(900px, 100%);
+  height: 500px;
+  padding: 18px;
+  background: #151515;
+  border: 8px solid #2b2b2b;
+  border-radius: 24px;
+  box-shadow:
+    0 28px 70px rgba(0, 0, 0, 0.22),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.pc-device.movie-device iframe {
+  width: 1200px;
+  height: 900px;
+  border-radius: 12px;
+  transform:translateX(-12px) translateY(-6px) scale(0.51);
+  transform-origin: top left;
+}
+
+/* ========================================
+   프로젝트 공통 - 설명, 컬러, 버튼
+======================================== */
+
+.project-text {
+  color: #2d303a;
+  font-size: 16px;
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+.project-text h3 {
+  margin: 24px 0 10px;
+  color: #111216;
+  font-size: 21px;
+  font-weight: 900;
+}
+
+.shinhan-layout .project-text h3 {
+  margin-top: 18px;
+}
+
+.project-text h3:first-child {
+  margin-top: 0;
+}
+
+.project-text ul {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.project-text li {
+  color: #3d404a;
+}
+
+.color-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 14px 0 4px;
+}
+
+.color {
+  color: #555a66;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+.color span {
+  display: block;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 8px;
+  border-radius: 13px;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 34px;
+  flex-wrap: nowrap;
+}
+
+.btn-group a {
+  min-width: 118px;
+  padding: 12px 18px;
+  border: 1px solid #262833;
+  border-radius: 12px;
+  color: #262833;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-group a:hover {
+  color: #fff;
+  background: #262833;
+  transform: translateY(-2px);
+}
+
+.project-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 24px;
+  margin-top: 18px;
+  color: #454854;
+  font-size: 13px;
+}
+
+.device .project-info {
+  width: max-content;
+  min-width: 430px;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 28px;
+  white-space: nowrap;
+  transform: translateX(-25px);
+}
+
+/* 위닉스 - 프로젝트 위치 조정 */
+#winix .project-inner {
+  margin-top: 68px;
+}
+
+.project-info span {
+  font-weight: 900;
+}
+
+.tool-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 14px;
+}
+
+
+
+.project-text .tool-list {
+  display: flex;
+}
+
+.tool-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 118px;
+  padding: 9px 12px;
+  color: #373a44;
+  background: #f7f9fc;
+  border: 1px solid #edf0f6;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.tool-list img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.tech-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.tech-icon.storage {
+  background: #3b3f4a;
+}
+
+/* ========================================
+   연락처
+======================================== */
+
+.contact-section {
+  min-height: 82vh;
+  padding: 120px 6vw;
+  display: flex;
+  align-items: center;
+  background: #111216;
+  color: #fff;
+}
+
+.contact-inner {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.contact-section .eyebrow {
+  margin-bottom: 18px;
+}
+
+.contact-section h2 {
+  font-size: clamp(42px, 5.2vw, 76px);
+  line-height: 1.15;
+  font-weight: 900;
+}
+
+.contact-list.large {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 58px;
+}
+
+.contact-list.large div {
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.contact-list.large dt {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.contact-list.large dd {
+  color: #fff;
+  font-size: 18px;
+}
+
+/* ========================================
+   신한카드 - 세부 스타일
+======================================== */
+
+.shinhan-layout .tool-list {
+  gap: 10px;
+}
+
+.shinhan-layout .tool-list li {
+  min-width: 112px;
+}
+
+.shinhan-layout .btn-group {
+  margin-top: 24px;
+  
+}
+
+
