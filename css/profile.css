@@ -352,6 +352,10 @@ img {
   order: -1;
 }
 
+.project-list li:has(a[href="#poinhand"]) {
+  order: 1;
+}
+
 .project-list li {
   display: grid;
   grid-template-columns: 78px 1fr;
@@ -384,6 +388,23 @@ img {
 
 .movie-thumb {
   background: linear-gradient(135deg, #111 0%, #2a2a2a 58%, #6353ff 100%);
+}
+
+.project-list img.pawinhand-thumb {
+  padding: 12px 8px;
+  background: #fff7f2;
+}
+
+.project-status {
+  display: inline-block;
+  margin-left: 6px;
+  padding: 3px 7px;
+  color: #ff5b25;
+  background: #fff0e9;
+  border-radius: 999px;
+  font-size: 10px;
+  font-style: normal;
+  vertical-align: 2px;
 }
 
 .project-list strong,
@@ -550,6 +571,195 @@ img {
 .project-inner.movie-layout {
   width: min(1280px, 100%);
   grid-template-columns: minmax(560px, 1fr) minmax(420px, 0.9fr);
+}
+
+/* 포인핸드 - 진행 중인 모바일 리뉴얼 */
+#daiso {
+  background: #fff7f7;
+}
+
+#winix {
+  background: #f4f7ff;
+}
+
+#cm29 {
+  background: #f7f7f7;
+}
+
+#movie {
+  background: #f6f4ff;
+}
+
+#shinhan {
+  background: #f2f7ff;
+}
+
+#poinhand {
+  background: #fff7f2;
+}
+
+.project-title h2 img.pawinhand-logo {
+  width: 245px;
+  max-width: none;
+  max-height: none;
+}
+
+.poinhand-section .project-title p {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ongoing-badge {
+  padding: 6px 10px;
+  color: #ff5b25;
+  background: #fff0e9;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.project-inner.poinhand-layout {
+  width: min(1180px, 100%);
+  grid-template-columns: minmax(520px, 0.95fr) minmax(400px, 1fr);
+}
+
+.poinhand-preview {
+  position: relative;
+  min-height: 650px;
+}
+
+.poinhand-phone {
+  position: absolute;
+  width: 270px;
+  height: 560px;
+  padding: 9px;
+  overflow: hidden;
+  background: #1f2023;
+  border: 4px solid #292a2d;
+  border-radius: 42px;
+  box-shadow: 0 28px 55px rgba(66, 39, 29, 0.2);
+}
+
+.poinhand-phone-back {
+  top: 45px;
+  left: 28px;
+  transform: rotate(-7deg);
+  opacity: 0.78;
+}
+
+.poinhand-phone-front {
+  top: 0;
+  left: 230px;
+  z-index: 2;
+  transform: rotate(5deg);
+}
+
+.phone-notch {
+  position: absolute;
+  top: 17px;
+  left: 50%;
+  z-index: 2;
+  width: 82px;
+  height: 20px;
+  background: #171719;
+  border-radius: 20px;
+  transform: translateX(-50%);
+}
+
+.poinhand-screen {
+  height: 100%;
+  padding: 55px 20px 24px;
+  background: #fff;
+  border-radius: 31px;
+}
+
+.mock-logo {
+  display: block;
+  width: 112px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.poinhand-screen > strong {
+  display: block;
+  color: #222;
+  font-size: 22px;
+  line-height: 1.35;
+}
+
+.mock-search {
+  height: 38px;
+  margin-bottom: 18px;
+  background: #f3f3f3;
+  border-radius: 12px;
+}
+
+.mock-banner {
+  height: 135px;
+  background: #ffe4d8;
+  border-radius: 18px;
+}
+
+.mock-card-row,
+.mock-actions {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.mock-card-row {
+  grid-template-columns: 1fr 1fr;
+}
+
+.mock-card-row i {
+  height: 150px;
+  background: #f2f2f2;
+  border-radius: 15px;
+}
+
+.mock-actions {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mock-actions i {
+  height: 68px;
+  background: #fff0e9;
+  border-radius: 16px;
+}
+
+.mock-pet-card {
+  height: 220px;
+  margin-top: 20px;
+  background: linear-gradient(145deg, #f1ece8, #ffd8c8);
+  border-radius: 20px;
+}
+
+.poinhand-preview .project-info {
+  position: absolute;
+  bottom: 0;
+  left: 55px;
+}
+
+.project-text p + p {
+  margin-top: 10px;
+}
+
+.progress-group {
+  margin-top: 26px;
+}
+
+.progress-button {
+  min-width: 158px;
+  padding: 12px 18px;
+  color: #ff5b25;
+  background: #fff0e9;
+  border-radius: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
 }
 
 /* ========================================
