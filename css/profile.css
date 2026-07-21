@@ -742,6 +742,23 @@ img {
   left: 55px;
 }
 
+.poinhand-layout .tool-list {
+  gap: 10px;
+}
+
+.poinhand-layout .tool-list li {
+  min-width: 0;
+  padding: 7px 9px;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.poinhand-layout .tool-list img,
+.poinhand-layout .tool-list .tech-icon {
+  width: 30px;
+  height: 30px;
+}
+
 .project-text p + p {
   margin-top: 10px;
 }
@@ -1110,6 +1127,11 @@ img {
 
 .tech-icon.storage {
   background: #3b3f4a;
+}
+
+.tech-icon.kakao {
+  color: #191919;
+  background: #fee500;
 }
 
 /* ========================================
