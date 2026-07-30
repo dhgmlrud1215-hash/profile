@@ -33,6 +33,10 @@ section {min-height: 100vh;}
 }
     
 
+.device {
+  overflow: hidden;
+}
+
 .device iframe {
   width: 370px;
   height: 660px;
