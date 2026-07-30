@@ -604,6 +604,10 @@ img {
   max-height: none;
 }
 
+.poinhand-section .project-title {
+  top: 112px;
+}
+
 .poinhand-section .project-title p {
   display: flex;
   align-items: center;
@@ -621,16 +625,18 @@ img {
 }
 
 .project-inner.poinhand-layout {
-  width: min(1180px, 100%);
-  grid-template-columns: minmax(520px, 0.95fr) minmax(400px, 1fr);
+  width: min(1220px, 100%);
+  margin-top: 68px;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(340px, 1fr);
+  gap: 66px;
 }
 
 .poinhand-preview {
-  position: relative;
-  min-height: 650px;
+  min-height: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .poinhand-device {
@@ -670,29 +676,15 @@ img {
 }
 
 .poinhand-preview .project-info {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
+  position: static;
   width: max-content;
   max-width: calc(100% - 24px);
-  transform: translateX(-50%);
-}
-
-.poinhand-layout .tool-list {
-  gap: 10px;
-}
-
-.poinhand-layout .tool-list li {
   min-width: 0;
-  padding: 7px 9px;
-  gap: 6px;
-  font-size: 12px;
-}
-
-.poinhand-layout .tool-list img,
-.poinhand-layout .tool-list .tech-icon {
-  width: 30px;
-  height: 30px;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 28px;
+  margin-top: 18px;
+  white-space: nowrap;
 }
 
 .project-text p + p {
@@ -700,7 +692,7 @@ img {
 }
 
 .progress-group {
-  margin-top: 26px;
+  margin-top: 34px;
 }
 
 .progress-button {
