@@ -349,14 +349,6 @@ img {
   gap: 14px 18px;
 }
 
-.project-list li:has(a[href="#daiso"]) {
-  order: -1;
-}
-
-.project-list li:has(a[href="#poinhand"]) {
-  order: 1;
-}
-
 .project-list li {
   display: grid;
   grid-template-columns: 58px minmax(0, 1fr);
@@ -622,6 +614,174 @@ img {
   color: #f8f7f3; background: #5d472a;
   font-size: 10px; font-weight: 900; letter-spacing: .08em;
 }
+
+.bluebottle-project-item {
+  background: transparent !important;
+}
+
+.bluebottle-thumb {
+  color: #fff;
+  background: #00a9e0;
+  font-size: 10px;
+  letter-spacing: .08em;
+}
+
+#bluebottle {
+  background: #f5fbfe;
+}
+
+.bluebottle-section {
+  min-height: 100vh;
+  padding-top: 142px;
+}
+
+.bluebottle-title {
+  top: 42px;
+  align-items: flex-end;
+}
+
+.bluebottle-title > div {
+  display: grid;
+  gap: 7px;
+}
+
+.bluebottle-title .project-category {
+  color: #008fc4;
+}
+
+.bluebottle-title h2 {
+  color: #111820;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -.04em;
+  line-height: 1;
+}
+
+.bluebottle-title p {
+  padding-bottom: 1px;
+  color: #00a9e0;
+  font-size: 14px;
+  letter-spacing: .12em;
+}
+
+.bluebottle-inner {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(420px, .95fr) minmax(360px, .75fr);
+  gap: clamp(54px, 7vw, 104px);
+  align-items: center;
+}
+
+.bluebottle-visual {
+  min-width: 0;
+}
+
+.bluebottle-image-window {
+  display: block;
+  height: min(690px, calc(100vh - 210px));
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid rgba(0, 169, 224, .16);
+  border-radius: 4px;
+  box-shadow: 0 28px 70px rgba(36, 86, 110, .16);
+  scrollbar-width: thin;
+  scrollbar-color: #00a9e0 #e7f5fa;
+}
+
+.bluebottle-image-window img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.bluebottle-visual small {
+  display: block;
+  margin-top: 10px;
+  color: #70818a;
+  font-size: 11px;
+}
+
+.bluebottle-copy {
+  padding-top: 0;
+}
+
+.bluebottle-eyebrow {
+  margin-bottom: 14px;
+  color: #00a9e0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.bluebottle-copy h3 {
+  max-width: 520px;
+  color: #111820;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(30px, 3.2vw, 48px);
+  font-weight: 900;
+  letter-spacing: -.045em;
+  line-height: 1.08;
+}
+
+.bluebottle-description {
+  max-width: 520px;
+  margin-top: 28px;
+  color: #53636c;
+  font-size: 15px;
+  line-height: 1.85;
+  word-break: keep-all;
+}
+
+.bluebottle-meta {
+  margin-top: 42px;
+  border-top: 1px solid rgba(17, 24, 32, .16);
+}
+
+.bluebottle-meta div {
+  display: grid;
+  grid-template-columns: 128px 1fr;
+  gap: 18px;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(17, 24, 32, .12);
+}
+
+.bluebottle-meta dt {
+  color: #00a9e0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+.bluebottle-meta dd {
+  color: #26333a;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .bluebottle-section { padding-top: 170px; align-items: flex-start; }
+  .bluebottle-title { top: 70px; }
+  .bluebottle-inner { grid-template-columns: 1fr; }
+  .bluebottle-visual, .bluebottle-copy { width: 100%; max-width: 720px; margin: 0 auto; }
+  .bluebottle-image-window { height: 650px; }
+}
+
+@media (max-width: 640px) {
+  .bluebottle-section { padding: 170px 24px 90px; }
+  .bluebottle-title { left: 24px; right: 24px; display: block; }
+  .bluebottle-title h2 { font-size: 27px; }
+  .bluebottle-title p { margin-top: 11px; font-size: 12px; }
+  .bluebottle-image-window { height: 520px; }
+  .bluebottle-copy h3 { font-size: 34px; }
+  .bluebottle-description { margin-top: 20px; font-size: 14px; }
+  .bluebottle-meta { margin-top: 30px; }
+  .bluebottle-meta div { grid-template-columns: 105px 1fr; }
+}
+
 .kinto-section {
   min-height: 100vh; padding-top: 112px; padding-bottom: 32px;
   align-items: center;
@@ -1030,6 +1190,28 @@ img {
 
 .project-text h3:first-child {
   margin-top: 0;
+}
+
+/* 공통 프로젝트 글자 크기가 KINTO 전용 스타일을 덮지 않도록 고정 */
+#kinto .kinto-copy {
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+#kinto .kinto-copy h3 {
+  margin: 12px 0 5px;
+  color: #5d472a;
+  font-size: 15px;
+  line-height: 1.35;
+  letter-spacing: .04em;
+}
+
+#kinto .kinto-block h3 {
+  margin-top: 0;
+}
+
+#kinto .kinto-type {
+  font-size: 14px;
 }
 
 .project-text ul {
