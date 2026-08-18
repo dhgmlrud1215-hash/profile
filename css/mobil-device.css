@@ -48,4 +48,10 @@ section {min-height: 100vh;}
   transform-origin: top left;
 }
 
+/* WINIX: keep the page viewport unchanged and lift only the notch. */
+#winix .device::before {
+  top: 8px;
+}
+
+
 
