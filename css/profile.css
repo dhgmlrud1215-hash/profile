@@ -1302,11 +1302,15 @@ img {
 }
 
 #winix .device {
+  position: relative;
+  z-index: 2;
   overflow: hidden;
   box-sizing: border-box;
 }
 
 #winix .device iframe {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   max-width: 100%;
@@ -1316,6 +1320,16 @@ img {
   border-radius: 40px;
   transform: none;
   box-sizing: border-box;
+}
+
+#winix .device::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border: 6px solid #2f2f2f;
+  border-radius: 55px;
+  pointer-events: none;
 }
 
 .winix-project-info {
