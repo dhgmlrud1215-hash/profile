@@ -1303,6 +1303,7 @@ img {
 
 #winix .device {
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 #winix .device iframe {
